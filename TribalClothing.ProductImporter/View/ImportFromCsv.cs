@@ -8,7 +8,7 @@ namespace TribalClothing.ProductImporter.View
 {
     class ImportFromCsv
     {
-        //skapa lista 
+        // US03: As a user I want to be able to import product data from CSV so that I may populate the product catalog
         List<Product> Products = new List<Product>();
 
         public void Display()
@@ -31,6 +31,7 @@ namespace TribalClothing.ProductImporter.View
                     var product = new Product(item.Name, item.Description, item.Price);
                     context.Products.Add(product);
                     context.SaveChanges();
+                    
                 }
             }
         }
