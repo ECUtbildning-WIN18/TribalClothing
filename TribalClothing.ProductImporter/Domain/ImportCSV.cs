@@ -12,6 +12,9 @@ namespace TribalClothing.ProductImporter.Domain
             Console.Clear();
             Console.WriteLine("# Import from CSV");
             
+
+
+
         }
 
     }

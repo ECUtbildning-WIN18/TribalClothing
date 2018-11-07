@@ -9,8 +9,7 @@ namespace TribalClothing.ProductImporter
         {
             var menu = new MenuView();
             menu.Display();
-
-
+            
         }
     }
 }
