@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using TribalClothing.ProductImporter.Domain;
+using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter.Services
 {
@@ -29,7 +30,11 @@ namespace TribalClothing.ProductImporter.Services
                     }
 
                     context.SaveChanges();
-                
+                Console.Clear();
+                Console.WriteLine("Products added from CSV, press any key");
+                Console.ReadKey();
+                MainView.Display();
+
             }
         }
     }

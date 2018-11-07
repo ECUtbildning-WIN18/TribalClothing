@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter.Domain
 {
@@ -15,7 +16,7 @@ namespace TribalClothing.ProductImporter.Domain
         {
             //"C:\Workspace\ECUtbildning\TribalClothing\TribalClothing.ProductImporter\bin\Debug\products.json"
 
-            using (StreamReader reader = new StreamReader("products.json"))
+            using (StreamReader reader = new StreamReader("Products.json"))
             {
                 var json = reader.ReadToEnd();
 
@@ -27,10 +28,13 @@ namespace TribalClothing.ProductImporter.Domain
                     {
                         db.Products.Add(product);
                     }
-
-                    Console.WriteLine("Products imported");
-
                     db.SaveChanges();
+                    Console.Clear();
+                    Console.WriteLine("Products imported, press any key");
+                    Console.ReadKey();
+                    MainView.Display();
+
+                    
                 }
             }
 
