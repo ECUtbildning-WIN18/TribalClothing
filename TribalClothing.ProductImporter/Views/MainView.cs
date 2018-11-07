@@ -25,6 +25,8 @@ namespace TribalClothing.ProductImporter.Views
                         liv.Run();
                         break;
                     case ConsoleKey.D2:
+                        var importcsv = new ImportCSVView();
+                        importcsv.Run();
                         break;
                     case ConsoleKey.D3:
                         var importjson = new ImportJSONView();

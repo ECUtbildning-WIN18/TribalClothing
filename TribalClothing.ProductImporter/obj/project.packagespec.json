@@ -26,6 +26,10 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "CsvHelper": {
+          "target": "Package",
+          "version": "[8.2.0, )"
+        },
         "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
           "version": "[2.2.0-preview3-35497, )"

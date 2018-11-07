@@ -37,6 +37,7 @@
           <e p="ResetCatalogView.cs" t="Include" />
           <e p="Services" t="Include">
             <e p="BaseView.cs" t="Include" />
+            <e p="CSVMapper.cs" t="Include" />
             <e p="PopulatorService.cs" t="Include" />
           </e>
         </e>

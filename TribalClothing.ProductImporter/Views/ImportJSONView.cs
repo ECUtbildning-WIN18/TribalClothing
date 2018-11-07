@@ -17,13 +17,10 @@ namespace TribalClothing.ProductImporter.Views
 
         public void Run()
         {
-            IList<Product> itemsToAdd = ParseJson();
+            var itemsToAdd = ParseJson();
             using (var context = new TribalClothingContext())
             {
-                foreach (var p in itemsToAdd)
-                {
-                    context.Products.Add(p);
-                }
+                context.Products.AddRange(itemsToAdd);
                 context.SaveChanges();
             }
 
