@@ -7,7 +7,7 @@ namespace TribalClothing.ProductImporter.Services
 {
     class CSVimporter
     {
-        public static void import()
+        public static void Import()
         {
             using (var reader = new StreamReader("Products.csv"))
             {
