@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Schema;
 using TribalClothing.ProductImporter.Domain;
 using TribalClothing.ProductImporter.View;
 
@@ -8,9 +9,9 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-
-            LoadJson.ReadJson();
-            Console.ReadLine();
+           MainView.Display();
+           Console.ReadKey();
+           Console.WriteLine("Press any key to exit");
         }
     }
 }
