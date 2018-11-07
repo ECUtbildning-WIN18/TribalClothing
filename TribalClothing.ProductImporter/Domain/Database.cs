@@ -29,7 +29,7 @@ namespace TribalClothing.ProductImporter.Domain
             return products;
         }
 
-        public static void ResetDatabase()
+        public void ResetDatabase()
         {
             using (var context = new TribalClothingContext())
             {
