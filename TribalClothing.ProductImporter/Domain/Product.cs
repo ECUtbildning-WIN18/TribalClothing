@@ -8,6 +8,11 @@ namespace TribalClothing.ProductImporter.Domain
         public string Description { get; set; }
         public decimal Price { get; set; }
 
+        public Product()
+        {
+
+        }
+
         public Product(string name, string description, decimal price)
         {
             Name = name;

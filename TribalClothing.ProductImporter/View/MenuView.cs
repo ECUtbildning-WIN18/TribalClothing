@@ -33,6 +33,8 @@ namespace TribalClothing.ProductImporter.View
                     case ConsoleKey.D2:
                         Console.Clear();
                         //adminAddUserViewDB.Display();
+                        var importFromCsv = new ImportFromCsv();
+                        importFromCsv.Display();
                         menuInputLoop = false;
                         break;
 
