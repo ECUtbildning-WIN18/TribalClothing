@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace TribalClothing.ProductImporter.View
 {
     class ListView
     {
-        public static void Diaplay()
+        public static void Display()
         {
             using (var context = new TribalClothingContext())
             {
