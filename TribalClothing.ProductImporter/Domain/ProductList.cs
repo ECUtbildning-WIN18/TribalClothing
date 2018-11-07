@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace TribalClothing.ProductImporter.Domain
 {
@@ -26,7 +24,7 @@ namespace TribalClothing.ProductImporter.Domain
                 }
             }
             
-            Console.WriteLine("\nEnd of List");
+            Console.WriteLine("\nEnd of List, press any button to continue.");
             Console.ReadKey();
 
             var menu = new MenuView();
