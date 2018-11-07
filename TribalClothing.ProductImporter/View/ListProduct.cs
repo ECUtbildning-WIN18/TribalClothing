@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Text;
 
 namespace TribalClothing.ProductImporter.View
@@ -13,19 +14,16 @@ namespace TribalClothing.ProductImporter.View
             Console.WriteLine("List Product");
 
             // skapa lista som visar importerad information från databasen - JSON och CSV
-            string connectionString = "Data Source=(local);Initial Catalog=TribalClothing;Integrated Security=true";
-
-            string queryString = $"SELECT Products VALUES('{name}', '{description}', '{price}')";
-
-            using (var connection = new SqlConnection(connectionString))
+            using (var context = new TribalClothingContext())
             {
-                var sqlCommand = new SqlCommand(queryString, connection);
+                var products = context.Products.ToList();
 
-                connection.Open();
-
-                var reader = sqlCommand.ExecuteNonQuery();
-                
+                foreach (var product in products)
+                {
+                    Console.WriteLine(product.Name);
+                }
             }
+            Console.ReadKey();
         }
     }
 }
