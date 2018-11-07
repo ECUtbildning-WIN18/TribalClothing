@@ -1,7 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
-using TribalClothing.ProductImporter.Domain;
-using TribalClothing.ProductImporter.Views;
+
+﻿using TribalClothing.ProductImporter.Views;
+
 
 namespace TribalClothing.ProductImporter
 {
@@ -12,7 +11,6 @@ namespace TribalClothing.ProductImporter
             var menu = new MainView();
 
             menu.StartView();
-            
         }
     }
 }
