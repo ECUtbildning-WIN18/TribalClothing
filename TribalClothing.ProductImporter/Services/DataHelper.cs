@@ -23,7 +23,7 @@ namespace TribalClothing.ProductImporter.Services
         }
 
 
-        public static IList<Product> GetProductsFromDb()
+        public static List<Product> GetProductsFromDb()
         {
             using (var context = new TribalClothingContext())
             {
