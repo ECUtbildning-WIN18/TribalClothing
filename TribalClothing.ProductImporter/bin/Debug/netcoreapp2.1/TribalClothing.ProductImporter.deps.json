@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "097415706618ab3e6dfbfd8f545b8be5c0a47e37"
+    "signature": "624527f1e11ef9c6b77709abc74e410358112685"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,8 @@
       "TribalClothing.ProductImporter/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0-preview3-35497",
-          "Microsoft.EntityFrameworkCore.Tools": "2.2.0-preview3-35497"
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.0-preview3-35497",
+          "Newtonsoft.Json": "12.0.1-beta1"
         },
         "runtime": {
           "TribalClothing.ProductImporter.dll": {}
@@ -221,6 +222,14 @@
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.1-beta1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22628"
           }
         }
       },
@@ -666,6 +675,13 @@
       "sha512": "sha512-vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cmCtkmZzWoHcwh96riskpZW9RqrAERDTCrWWXwfTdnKqOUIy2AMFF6Jje2jjKIoSVekwoTmf+WRr9cGRx8hRsQ==",
+      "path": "newtonsoft.json/12.0.1-beta1",
+      "hashPath": "newtonsoft.json.12.0.1-beta1.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

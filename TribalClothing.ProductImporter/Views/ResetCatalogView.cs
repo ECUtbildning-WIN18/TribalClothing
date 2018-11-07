@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TribalClothing.ProductImporter.Domain;
 using TribalClothing.ProductImporter.Views.Services;
 
@@ -17,21 +18,11 @@ namespace TribalClothing.ProductImporter.Views
         {
             using (var context = new TribalClothingContext())
             {
-                if (context.Products.Count() < 1)
-                {
-                    foreach (var p in context.Products)
-                    {
-                        context.Products.Remove(p);
-                    }
-
-                    context.SaveChanges();
-                }
-                else
-                {
-                    Console.WriteLine("Nothing exists in the database to be cleared\n" +
-                                      "Press return to go back");
-                    Console.ReadLine();
-                }
+                context.Database.ExecuteSqlCommand("TRUNCATE TABLE Products");
+                context.SaveChanges();
+                Console.WriteLine("Database has been cleared\n" +
+                                  "Press return to go back");
+                Console.ReadLine();
             }
         }
     }

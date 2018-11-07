@@ -27,6 +27,8 @@ namespace TribalClothing.ProductImporter.Views
                     case ConsoleKey.D2:
                         break;
                     case ConsoleKey.D3:
+                        var importjson = new ImportJSONView();
+                        importjson.Run();
                         break;
                     case ConsoleKey.D4:
                         var rcv = new ResetCatalogView();
@@ -42,6 +44,7 @@ namespace TribalClothing.ProductImporter.Views
                         Console.ReadLine();
                         break;
                 }
+                RedrawMenu("Main Menu", 1);
             } while (input != ConsoleKey.Escape);
         }
     }

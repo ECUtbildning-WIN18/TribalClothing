@@ -18,6 +18,14 @@ namespace TribalClothing.ProductImporter.Views.Services
             DrawEntries(entries);
         }
 
+        public virtual void RedrawMenu(string title, int menuChoice)
+        {
+            Console.Clear();
+            Console.Title = title;
+            var entries = new PopulatorService().MenuPopulator(menuChoice);
+            DrawEntries(entries);
+        }
+        
         private void DrawEntries(string[] entries)
         {
             foreach (var s in entries)

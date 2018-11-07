@@ -17,7 +17,7 @@ namespace TribalClothing.ProductImporter.Views
         public void Run()
         {
             var products = GetItems();
-            Console.WriteLine($"Total Products: {products.Count}");
+            Console.WriteLine($"Total Products: {products.Count}\n");
             Console.WriteLine("PRODUCT NAME\t\t\tPRODUCT DESCRIPTION");
             foreach (var p in products)
             {

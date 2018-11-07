@@ -12,6 +12,8 @@
         <e p="Domain" t="Include">
           <e p="Product.cs" t="Include" />
         </e>
+        <e p="items.csv" t="Include" />
+        <e p="Items.JSON" t="Include" />
         <e p="Migrations" t="Include">
           <e p="20181107080709_Initial.cs" t="Include" />
           <e p="20181107080709_Initial.Designer.cs" t="Include" />
@@ -28,6 +30,8 @@
         <e p="TribalClothing.ProductImporter.csproj" t="IncludeRecursive" />
         <e p="TribalClothingContext.cs" t="Include" />
         <e p="Views" t="Include">
+          <e p="ImportCSVView.cs" t="Include" />
+          <e p="ImportJSONView.cs" t="Include" />
           <e p="ListItemsView.cs" t="Include" />
           <e p="MainView.cs" t="Include" />
           <e p="ResetCatalogView.cs" t="Include" />
