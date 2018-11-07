@@ -1,4 +1,5 @@
 ﻿using System;
+using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter
 {
@@ -6,7 +7,9 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
+            var menuView = new MainMenuView();
 
+            menuView.Display();
         }
     }
 }

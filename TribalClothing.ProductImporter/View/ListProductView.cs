@@ -6,29 +6,28 @@ namespace TribalClothing.ProductImporter.View
 {
     class ListProductView
     {
-        private int count = 0;
+        
 
         public void Display()
         {
+            int count = 0;
+            
             Console.Clear();
-            Console.Write($"Total products: {count}");
-            Console.WriteLine("\nPRODUCT NAME         PRODUCT DESCRIPTION");
-            ListProduct();
+            Console.WriteLine($"Total products: {count}"); // EJ KLAAAAR!!!
+            Console.WriteLine("\nPRODUCT NAME               PRODUCT DESCRIPTION");
 
-            Console.ReadKey();
-        }
-
-        public void ListProduct()
-        {
             using (var db = new TribalClothingContext())
             {
                 var productList = db.Products.ToList();
 
                 foreach (var product in productList)
                 {
-                    Console.WriteLine($"{product.Name}          {product.Description}");   
+                    Console.WriteLine($"{product.Name}                   {product.Description}");
+                    count += 1;
                 }
             }
+
+            Console.ReadKey();
         }
     }
 }

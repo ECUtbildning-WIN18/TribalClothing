@@ -22,7 +22,9 @@ namespace TribalClothing.ProductImporter.View
                 switch (consoleKeyInfo.Key)
                 {
                     case ConsoleKey.D1:
-                        
+                        var listProduct = new ListProductView();
+                        listProduct.Display();
+
                         break;
                     case ConsoleKey.D2:
                         
