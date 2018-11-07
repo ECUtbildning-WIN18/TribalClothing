@@ -50,9 +50,8 @@ namespace TribalClothing.ProductImporter.View
 
                     case ConsoleKey.D4:
                         Console.Clear();
-                        //Clear Product Catalog
-                        var clearProductCatalog = new ClearProductCatalog();
-                        clearProductCatalog.Display();
+                        var clearProducts = new ClearProducts();
+                        clearProducts.RemoveAllProducts();
                         menuInputLoop = false;
                         break;
 
