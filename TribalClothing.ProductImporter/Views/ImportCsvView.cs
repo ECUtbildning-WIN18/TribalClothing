@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.Views
+=======
+﻿namespace TribalClothing.ProductImporter.Views
+>>>>>>> ca98bee53f681d4fe37554e07fa593d26dc5e2b6
 {
      class ImportCsvView
     {
