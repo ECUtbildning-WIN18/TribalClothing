@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore.Storage;
+using Database = TribalClothing.ProductImporter.Domain.Database;
 
 namespace TribalClothing.ProductImporter.Views
 {
@@ -49,7 +51,8 @@ namespace TribalClothing.ProductImporter.Views
                     }
                     case ConsoleKey.D4:
                     {
-                        //insert view
+                        var resetTable = new ResetView();
+                        resetTable.Display();
                         break;
                     }
                     case ConsoleKey.D5:
