@@ -11,7 +11,7 @@ namespace TribalClothing.ProductImporter.Views
         public void StartView()
         {
             bool menu = true;
-
+            var products = new List<Product>();
             while (menu)
             {
                 Console.Clear();
@@ -44,7 +44,7 @@ namespace TribalClothing.ProductImporter.Views
                             var csvReader = new CsvReader(reader);
                             csvReader.Configuration.Delimiter = ";";
                             var records = csvReader.GetRecords<Product>();
-                            var products = new List<Product>();
+                            
 
                             foreach (var p in records)
                             {
@@ -73,6 +73,10 @@ namespace TribalClothing.ProductImporter.Views
                         }
                     case "4":
                         {
+                            var delete = new Delete();
+
+                            delete.DeleteUser(products);
+
                             break;
                         }
 
