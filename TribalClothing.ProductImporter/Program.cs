@@ -7,8 +7,9 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-            var test = new FromJsonFile();
-            test.LoadJson();
+            MainMenu Menu = new MainMenu();
+            while (true)
+                Menu.Display();
         }
     }
 }
