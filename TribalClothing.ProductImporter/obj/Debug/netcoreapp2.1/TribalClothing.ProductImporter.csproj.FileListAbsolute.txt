@@ -1,0 +1,11 @@
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\bin\Debug\netcoreapp2.1\TribalClothing.ProductImporter.deps.json
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\bin\Debug\netcoreapp2.1\TribalClothing.ProductImporter.runtimeconfig.json
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\bin\Debug\netcoreapp2.1\TribalClothing.ProductImporter.runtimeconfig.dev.json
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\bin\Debug\netcoreapp2.1\TribalClothing.ProductImporter.dll
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\bin\Debug\netcoreapp2.1\TribalClothing.ProductImporter.pdb
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.csprojAssemblyReference.cache
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.csproj.CoreCompileInputs.cache
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.AssemblyInfoInputs.cache
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.AssemblyInfo.cs
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.dll
+C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing\TribalClothing.ProductImporter\obj\Debug\netcoreapp2.1\TribalClothing.ProductImporter.pdb

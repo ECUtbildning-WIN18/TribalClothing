@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\miaz\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\miaz\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\miaz\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\miaz\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_TribalClothing.-1245845804.00" t="ExcludeRecursive" />
+    <e p="C:\Users\miaz\Workspace\ECUtbildning\LAB04\TribalClothing" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TribalClothing.ProductImporter" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Product.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20181107080709_Initial.cs" t="Include" />
+          <e p="20181107080709_Initial.Designer.cs" t="Include" />
+          <e p="TribalClothingContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="TribalClothing.ProductImporter.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="TribalClothing.ProductImporter.csproj" t="IncludeRecursive" />
+        <e p="TribalClothingContext.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="BaseView.cs" t="Include" />
+          <e p="MainView.cs" t="Include" />
+          <e p="PopulatorService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="TribalClothing.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
