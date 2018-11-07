@@ -28,8 +28,9 @@ namespace TribalClothing.ProductImporter.View
 
                         break;
                     case ConsoleKey.D2:
-                        
-                        
+                        var importCsv = new CSVHelper();
+                        importCsv.GetProduct();
+
                         break;
                     case ConsoleKey.D3:
                         var getProduct = new JSONHelper();
@@ -38,6 +39,8 @@ namespace TribalClothing.ProductImporter.View
 
                         break;
                     case ConsoleKey.D4:
+                        var clearList = new ClearList();
+                        clearList.RemoveProducts();
 
                         break;
                     default:

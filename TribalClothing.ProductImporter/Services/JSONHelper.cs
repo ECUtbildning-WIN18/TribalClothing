@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Threading;
 using Newtonsoft.Json;
 using TribalClothing.ProductImporter.Domain;
 using TribalClothing.ProductImporter.View;
@@ -26,7 +26,11 @@ namespace TribalClothing.ProductImporter.Services
                         }
 
                         db.SaveChanges();
-                        
+
+                        Console.Clear();
+                        Console.WriteLine("\nImport Success!");
+                        Thread.Sleep(2000);
+
                         MainMenuView.Display();
                     }
                 }

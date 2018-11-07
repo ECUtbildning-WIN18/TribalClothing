@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Remotion.Linq.Parsing.Structure.IntermediateModel;
 
 namespace TribalClothing.ProductImporter.View
 {
@@ -11,7 +10,7 @@ namespace TribalClothing.ProductImporter.View
             int count = 0;
             
             Console.Clear();
-            Console.WriteLine($"Total products: {count}"); // EJ KLAAAAR!!!
+            Console.WriteLine("Total products:");
             Console.WriteLine("\nPRODUCT NAME               PRODUCT DESCRIPTION");
 
             using (var db = new TribalClothingContext())
@@ -25,7 +24,18 @@ namespace TribalClothing.ProductImporter.View
                 }
             }
 
+            WriteAt($"{count}", 16 ,0);
             Console.ReadKey();
+
+            MainMenuView.Display();
+        }
+
+        public static int xCoord, yCoord, y;
+
+        static void WriteAt(string s, int x, int y)
+        {
+            Console.SetCursorPosition(xCoord + x, yCoord + y);
+            Console.Write(s);
         }
     }
 }
