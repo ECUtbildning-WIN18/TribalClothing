@@ -1,18 +1,13 @@
-﻿using System;
-using TribalClothing.ProductImporter.Domain.View;
+﻿using TribalClothing.ProductImporter.Domain.View;
 
 namespace TribalClothing.ProductImporter
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             var startMenu = new StartMenu();
             startMenu.Display();
-
-            Console.ReadKey();
-
         }
     }
 }

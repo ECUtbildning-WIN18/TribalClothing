@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace TribalClothing.ProductImporter.Domain
 {
-    class ClearProductsFromDb
+    internal class ClearProductsFromDb
     {
         public void ClearDb()
         {
@@ -13,10 +10,7 @@ namespace TribalClothing.ProductImporter.Domain
             {
                 var productList = new TribalClothingContext().Products.ToList();
 
-                foreach (var product in productList)
-                {
-                    context.Remove(product);
-                }
+                foreach (var product in productList) context.Remove(product);
 
                 context.SaveChanges();
             }

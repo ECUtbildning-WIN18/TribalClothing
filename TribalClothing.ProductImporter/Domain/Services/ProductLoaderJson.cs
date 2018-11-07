@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace TribalClothing.ProductImporter.Domain
 {
-    class ProductLoaderJson
+    internal class ProductLoaderJson
     {
         public void ImportToDb()
         {
@@ -17,10 +17,7 @@ namespace TribalClothing.ProductImporter.Domain
 
                 using (var context = new TribalClothingContext())
                 {
-                    foreach (var item in items)
-                    {
-                        context.Add(item);
-                    }
+                    foreach (var item in items) context.Add(item);
 
                     context.SaveChanges();
                 }

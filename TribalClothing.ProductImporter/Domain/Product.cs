@@ -1,16 +1,9 @@
-﻿
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace TribalClothing.ProductImporter.Domain
 {
     public class Product
     {
-        [IgnoreDataMember]
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-
         public Product()
         {
         }
@@ -22,5 +15,11 @@ namespace TribalClothing.ProductImporter.Domain
             Description = description;
             Price = price;
         }
+
+        [IgnoreDataMember] public int Id { get; set; }
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
     }
 }

@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq.Expressions;
 using CsvHelper;
 
 namespace TribalClothing.ProductImporter.Domain
@@ -11,7 +9,7 @@ namespace TribalClothing.ProductImporter.Domain
         public void ExportToDb()
         {
             TextReader reader = new StreamReader("ProductsCsv.csv");
-           
+
             var csv = new CsvReader(reader);
             csv.Configuration.Delimiter = ";";
 
