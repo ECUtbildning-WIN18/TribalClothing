@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using TribalClothing.ProductImporter.Services;
 
 namespace TribalClothing.ProductImporter.View
 {
@@ -9,6 +8,7 @@ namespace TribalClothing.ProductImporter.View
         public void Display()
         {
             int menuChoice = 0;
+            var productList = DataHelper.GetProductsFromDb();
 
             while (true)
             {
@@ -17,7 +17,8 @@ namespace TribalClothing.ProductImporter.View
                 Console.WriteLine("\n1. List all products");
                 Console.WriteLine("2. Import from CSV");
                 Console.WriteLine("3. Import from JSON");
-                Console.WriteLine("4. Clear product catalouge");
+                Console.WriteLine("4. Clear product catalog");
+                Console.WriteLine("5. Exit the application");
 
                 try
                 {
@@ -31,31 +32,37 @@ namespace TribalClothing.ProductImporter.View
                 switch (menuChoice)
                 {
                     case 1:
-                        Console.WriteLine("List Products");
+
+                        DataHelper.ListProducts(DataHelper.GetProductsFromDb());
                         Console.ReadKey();
-                        //DataHelper.ListProducts();
                         break;
 
                     case 2:
-                        Console.WriteLine("Import from CSV");
+
+                        DataHelper.StoreProductsToDb(DataHelper.ImportFromCSVFile());
+                        Console.WriteLine("Import completed");
                         Console.ReadKey();
-                        //DataHelper.ImportFromCSVFile(inparameter);
                         break;
 
                     case 3:
-                        Console.WriteLine("Import from JSON");
+                        DataHelper.StoreProductsToDb(DataHelper.ImportFromJSONFile());
+                        Console.WriteLine("Import completed");
                         Console.ReadKey();
-                        //DataHelper.ImportFromJSONFile(inparameter);
                         break;
 
                     case 4:
-                        Console.WriteLine("Clear Product");
+                        DataHelper.ClearProductCatalog();
+                        Console.WriteLine("All items are deleted");
                         Console.ReadKey();
-                        //DataHelper.ClearProductCatalog();
+                        break;
+
+                    case 5:
+                        Environment.Exit(0);
                         break;
 
                     default:
-                        Console.WriteLine("You can only choose by numbers 1-4");
+                        Console.WriteLine("You can only choose by numbers 1-5");
+                        Console.ReadKey();
                         break;
                 }
             }
