@@ -104,14 +104,10 @@ namespace TribalClothing.ProductImporter
 
         private static bool Duplicate(Product product, IEnumerable<Product> existing)
         {
-            foreach (var item in existing)
-            {
-                if (product.Name == item.Name)   return true;
-            }
-            return false;
+            return existing.Any(item => product.Name == item.Name);
         }
 
-        private static List<Product> LoadCsv()
+        private static IEnumerable<Product> LoadCsv()
         {
             var products = new List<Product>();
             using(var reader = new StreamReader("Domain/Products.csv"))
@@ -119,11 +115,9 @@ namespace TribalClothing.ProductImporter
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    if (line != null&&line!="Id;Name;Description;Price")
-                    {
-                        var values = line.Split(';');
-                        products.Add(new Product(values[1],values[2],decimal.Parse(values[3])));
-                    }
+                    if (line == null || line == "Id;Name;Description;Price") continue;
+                    var values = line.Split(';');
+                    products.Add(new Product(values[1],values[2],decimal.Parse(values[3])));
                 }
             }
             return products;
