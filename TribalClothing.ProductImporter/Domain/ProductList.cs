@@ -20,13 +20,17 @@ namespace TribalClothing.ProductImporter.Domain
 
                 foreach (var product in products)
                 {
+
                     Console.WriteLine($"Name: {product.Name} Id: {product.Id}  Price: {product.Price} Description: {product.Description}");
                     
                 }
             }
             
-            Console.ReadLine();
-            
+            Console.WriteLine("\nEnd of List");
+            Console.ReadKey();
+
+            var menu = new MenuView();
+            menu.Display();
         }
     }
 }
