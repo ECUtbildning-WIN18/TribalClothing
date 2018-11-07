@@ -10,7 +10,7 @@ namespace TribalClothing.ProductImporter.Services
         {
             using (var reader = new StreamReader("Products.csv"))
             {
-                {
+                
                     var context = new TribalClothingContext();
 
                     while (!reader.EndOfStream)
@@ -19,17 +19,17 @@ namespace TribalClothing.ProductImporter.Services
 
                         var values = line.Split(';');
 
-                        var id = Convert.ToInt32(values[0]);
+                        //var id = Convert.ToInt32(values[0]);
                         var name = values[1];
                         var description = values[2];
                         var price = Convert.ToDecimal(values[3]);
 
-                        var product = new Product(id, name, description, price);
+                        var product = new Product(name, description, price);
                         context.Products.Add(product);
                     }
 
                     context.SaveChanges();
-                }
+                
             }
         }
     }
