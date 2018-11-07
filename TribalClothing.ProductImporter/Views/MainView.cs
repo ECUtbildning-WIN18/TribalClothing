@@ -1,15 +1,16 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using System.Linq;
+using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.Views
 {
     class MainView
     {
-
         public void StartView()
         {
-
             bool menu = true;
 
             while (menu)
@@ -21,7 +22,6 @@ namespace TribalClothing.ProductImporter.Views
 
                 string menuChoise = Console.ReadLine();
 
-
                 switch (menuChoise)
                 {
                     case "1":
@@ -30,6 +30,10 @@ namespace TribalClothing.ProductImporter.Views
                         }
                     case "2":
                         {
+                            TextReader reader = new StreamReader("Products.CSV");
+                            var csvReader = new CsvReader(reader);
+                            var records = csvReader.GetRecords<Product>();
+
                             break;
                         }
                     case "3":

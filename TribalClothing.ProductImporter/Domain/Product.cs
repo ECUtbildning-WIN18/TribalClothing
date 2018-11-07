@@ -1,5 +1,4 @@
-﻿
-namespace TribalClothing.ProductImporter.Domain
+﻿namespace TribalClothing.ProductImporter.Domain
 {
     class Product
     {
@@ -7,5 +6,17 @@ namespace TribalClothing.ProductImporter.Domain
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+
+        public Product(int id, string name, string description, decimal price)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            Price = price;
+        }
+
+        public Product()
+        {
+        }
     }
 }

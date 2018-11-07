@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TribalClothing.ProductImporter.Views;
 
 namespace TribalClothing.ProductImporter
 {
@@ -6,7 +6,9 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var menu = new MainView();
+
+            menu.StartView();
         }
     }
 }
