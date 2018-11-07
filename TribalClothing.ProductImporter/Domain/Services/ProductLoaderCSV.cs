@@ -8,7 +8,7 @@ namespace TribalClothing.ProductImporter.Domain
     {
         public void ExportToDb()
         {
-            TextReader reader = new StreamReader("ProductsCsv.csv");
+            TextReader reader = new StreamReader(@"C:\Workspace\ECUtbildning\TribalClothing\TribalClothing.ProductImporter\ProductsCsv.csv");
 
             var csv = new CsvReader(reader);
             csv.Configuration.Delimiter = ";";

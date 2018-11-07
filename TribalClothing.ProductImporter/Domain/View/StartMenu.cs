@@ -28,7 +28,9 @@ namespace TribalClothing.ProductImporter.Domain.View
                         isRunning = true;
                         break;
                     case ConsoleKey.D2:
-                        //Import from CSV
+                        var loadCsv = new ProductLoaderCsv();
+                        loadCsv.ExportToDb();
+                        StandardMessages.Success();
                         break;
                     case ConsoleKey.D3:
                         var loadJson = new ProductLoaderJson();
