@@ -26,6 +26,7 @@ namespace TribalClothing.ProductImporter.Domain.View
                         isRunning = false;
                         var listProducts = new ListProductsFromDb();
                         listProducts.ListProducts();
+                        isRunning = true;
                         break;
                     case ConsoleKey.D2:
                         //Import from CSV
@@ -35,7 +36,8 @@ namespace TribalClothing.ProductImporter.Domain.View
                         loadJson.ImportToDb();
                         break;
                     case ConsoleKey.D4:
-                        //Clear catalog
+                        var clearCatalog = new ClearProductsFromDb();
+                        clearCatalog.ClearDb();
                         break;
                     default:
                         Console.WriteLine("Invalid input!");

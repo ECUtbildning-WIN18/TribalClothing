@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TribalClothing.ProductImporter.Domain.View;
 
 namespace TribalClothing.ProductImporter.Domain
 {
@@ -18,6 +19,9 @@ namespace TribalClothing.ProductImporter.Domain
             {
                 Console.WriteLine($"{product.Name}\t{product.Description}");
             }
+
+            Console.WriteLine("\nPress any key to go back to previous menu");
+            Console.ReadKey(true);
         }
     }
 }
