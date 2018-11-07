@@ -1,5 +1,4 @@
-﻿using System;
-using TribalClothing.ProductImporter.Views;
+﻿using TribalClothing.ProductImporter.Views;
 
 namespace TribalClothing.ProductImporter
 {

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TribalClothing.ProductImporter.Domain.Services;
 
 namespace TribalClothing.ProductImporter.Views

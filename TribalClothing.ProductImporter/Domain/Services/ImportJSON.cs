@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Newtonsoft.Json.Linq;
 
 namespace TribalClothing.ProductImporter.Domain.Services
 {
@@ -12,16 +10,13 @@ namespace TribalClothing.ProductImporter.Domain.Services
         {
             using (var context = new TribalClothingContext())
             {
-                //csv = new Product("Peruvian 1", "Lorum ipsum", 100);
-
-                using (var r = new StreamReader(json_filepath))
+                using (StreamReader r = new StreamReader(json_filepath))
                 {
                     var json = r.ReadToEnd();
-                    var jobjs = JObject.Parse(json);
-
-                    foreach (var jobj in jobjs.Properties())
+                    var jsonConv = JsonConvert.DeserializeObject<List<Product>>(json);
+                    foreach (var item in jsonConv)
                     {
-                        context.Products.Add(jobj.ToObject<Product>());
+                        context.Products.Add(item);
                     }
                 }
                 context.SaveChanges();
