@@ -1,7 +1,9 @@
-﻿using System;
+
+using System;
 using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter
+
 {
     class Program
     {
@@ -9,8 +11,6 @@ namespace TribalClothing.ProductImporter
         {
             var menu = new MainMenu();
             menu.Display();
-
-
         }
     }
 }
