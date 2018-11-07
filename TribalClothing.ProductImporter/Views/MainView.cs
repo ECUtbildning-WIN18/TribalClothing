@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.Views
@@ -32,7 +31,21 @@ namespace TribalClothing.ProductImporter.Views
                         {
                             TextReader reader = new StreamReader("Products.CSV");
                             var csvReader = new CsvReader(reader);
+                            csvReader.Configuration.Delimiter = ";";
                             var records = csvReader.GetRecords<Product>();
+                            var products = new List<Product>();
+
+                            foreach (var p in records)
+                            {
+                                p.Id = 0;
+                                products.Add(p);
+                            }
+
+                            using (var context = new TribalClothingContext())
+                            {
+                                context.Products.AddRange(products);
+                                context.SaveChanges();
+                            }
 
                             break;
                         }
