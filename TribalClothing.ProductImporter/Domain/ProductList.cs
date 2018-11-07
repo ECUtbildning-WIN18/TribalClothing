@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace TribalClothing.ProductImporter.Domain
 {
@@ -10,8 +9,17 @@ namespace TribalClothing.ProductImporter.Domain
         {
             Console.Clear();
             Console.WriteLine("# List products");
-            
 
+            using (var context = new TribalClothingContext())
+            {
+                var products = context.Products.ToList();
+                foreach (var prod in products)
+                {
+                    Console.WriteLine($"{prod.Id} {prod.Name} {prod.Description} {prod.Price}");
+                }  
+            }
+
+            Console.ReadLine();
         }
     }
 }
