@@ -7,9 +7,7 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-            var menuView = new MainMenuView();
-
-            menuView.Display();
+            MainMenuView.Display();
         }
     }
 }

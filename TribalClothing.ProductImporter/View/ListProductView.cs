@@ -6,8 +6,6 @@ namespace TribalClothing.ProductImporter.View
 {
     class ListProductView
     {
-        
-
         public void Display()
         {
             int count = 0;

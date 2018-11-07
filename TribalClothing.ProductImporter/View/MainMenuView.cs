@@ -1,10 +1,11 @@
 ﻿using System;
+using TribalClothing.ProductImporter.Services;
 
 namespace TribalClothing.ProductImporter.View
 {
     class MainMenuView
     {
-        public void Display()
+        public static void Display()
         {
             var isRunning = true;
 
@@ -17,7 +18,7 @@ namespace TribalClothing.ProductImporter.View
                 Console.WriteLine("3. Import from JSON");
                 Console.WriteLine("4. Clear product catalog");
 
-                var consoleKeyInfo = Console.ReadKey();
+                var consoleKeyInfo = Console.ReadKey(true);
 
                 switch (consoleKeyInfo.Key)
                 {
@@ -28,8 +29,12 @@ namespace TribalClothing.ProductImporter.View
                         break;
                     case ConsoleKey.D2:
                         
+                        
                         break;
                     case ConsoleKey.D3:
+                        var getProduct = new JSONHelper();
+                        getProduct.GetProduct();
+                        Console.ReadKey();
 
                         break;
                     case ConsoleKey.D4:
