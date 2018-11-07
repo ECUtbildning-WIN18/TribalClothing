@@ -7,7 +7,7 @@ namespace TribalClothing.ProductImporter
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=TribalClothing;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=LARS-DATOR\\MSSQLSERVER01;Database=TribalClothing;Integrated Security=True;");
         }
 
         public DbSet<Product> Products { get; set; }
