@@ -10,6 +10,7 @@ namespace TribalClothing.ProductImporter.Domain
         public void Display()
         {
             Console.Clear();
+
             Console.WriteLine("# List products: ");
             
             using (var context = new TribalClothingContext())
@@ -23,7 +24,9 @@ namespace TribalClothing.ProductImporter.Domain
                     
                 }
             }
-
+            
+            Console.ReadLine();
+            
         }
     }
 }

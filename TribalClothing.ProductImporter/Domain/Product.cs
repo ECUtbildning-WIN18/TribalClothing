@@ -24,4 +24,7 @@ namespace TribalClothing.ProductImporter.Domain
             Price = price;
         }
     }
+
+       
+
 }
