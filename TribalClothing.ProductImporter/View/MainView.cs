@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using TribalClothing.ProductImporter.Services;
 
 namespace TribalClothing.ProductImporter.View
 {
@@ -18,8 +19,10 @@ namespace TribalClothing.ProductImporter.View
             switch (choice)
             {
                 case ConsoleKey.D1:
+                    ListView.Diaplay();
                     break;
                 case ConsoleKey.D2:
+                    CSVimporter.import();
                     break;
                 case ConsoleKey.D3:
                     break;

@@ -1,5 +1,6 @@
 ﻿using System;
 using TribalClothing.ProductImporter.Domain;
+using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter
 {
@@ -7,6 +8,7 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
+
             LoadJson.ReadJson();
             Console.ReadLine();
         }
