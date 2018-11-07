@@ -27,6 +27,9 @@ namespace TribalClothing.ProductImporter.Domain
                     {
                         db.Products.Add(product);
                     }
+
+                    Console.WriteLine("Products imported");
+
                     db.SaveChanges();
                 }
             }

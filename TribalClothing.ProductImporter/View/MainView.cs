@@ -29,6 +29,7 @@ namespace TribalClothing.ProductImporter.View
                     LoadJson.ReadJson();
                     break;
                 case ConsoleKey.D4:
+                    ClearProducts.ClearList();
                     break;
 
             }
