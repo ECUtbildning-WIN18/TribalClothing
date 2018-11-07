@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.Services
 {
@@ -10,34 +11,25 @@ namespace TribalClothing.ProductImporter.Services
             using (var reader = new StreamReader("Products.csv"))
             {
                 {
-                    var line = reader.ReadLine();
+                    var context = new TribalClothingContext();
 
-                    var values = line.Split(';');
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
 
-                    var id = Convert.ToInt32(values[0]);
-                    var name = values[1];
-                    var description = values[2];
-                    var price = Convert.ToDecimal(values[3]);
+                        var values = line.Split(';');
 
+                        var id = Convert.ToInt32(values[0]);
+                        var name = values[1];
+                        var description = values[2];
+                        var price = Convert.ToDecimal(values[3]);
 
+                        var product = new Product(id, name, description, price);
+                        context.Products.Add(product);
+                    }
 
-                    //using (var context = new TribalClothingContext())
-                    //{
-
-                    //    var product = new Product(id, name, description, price);
-                    //    foreach (var VARIABLE in context)
-                    //    {
-                    //        V
-                    //    }
-                    //    context.Products.Add(product);
-                    //    context.SaveChanges();
-                    //}
-
-
-
+                    context.SaveChanges();
                 }
-
-
             }
         }
     }
