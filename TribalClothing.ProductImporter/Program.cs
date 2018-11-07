@@ -1,4 +1,5 @@
 ﻿using System;
+using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter
 {
@@ -6,7 +7,9 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainMenu Menu = new MainMenu();
+            while (true)
+                Menu.Display();
         }
     }
 }
