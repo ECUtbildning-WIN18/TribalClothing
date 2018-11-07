@@ -6,5 +6,9 @@ namespace TribalClothing.ProductImporter.Views
 {
     class ClearProductsView
     {
+        public void Display()
+        {
+
+        }
     }
 }

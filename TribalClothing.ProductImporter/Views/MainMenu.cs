@@ -25,22 +25,23 @@ namespace TribalClothing.ProductImporter.Views
 
                 if (choice.Key == ConsoleKey.D1)
                 {
-                    var manageUserView = new ManageUserView();
-                    manageUserView.Display();
+                    var listProductView = new ListProductView();
+                    listProductView.Display();
                 }
                 else if (choice.Key == ConsoleKey.D2)
                 {
-                    var loginView = new LoginView();
-                    loginView.Display();
-                    done = true;
+                    var importCsvView = new ImportCSVView();
+                    importCsvView.Display();
                 }
                 else if (choice.Key == ConsoleKey.D3 || choice.Key == ConsoleKey.NumPad3)
                 {
-
+                    var importJSONView=new ImportJSONView();
+                    importJSONView.Display();
                 }
                 else if (choice.Key == ConsoleKey.D4)
                 {
-                    
+                    var clearProductsView=new ClearProductsView();
+                    clearProductsView.Display();
                 }
                 else if (choice.Key == ConsoleKey.D5)
                 {
