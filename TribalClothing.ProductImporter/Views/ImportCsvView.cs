@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TribalClothing.ProductImporter.Views
+﻿namespace TribalClothing.ProductImporter.Views
 {
     class ImportCsvView
     {

@@ -1,0 +1,14 @@
+[
+   {
+      "id": 1,
+      "name": "Peruvian 1",
+      "description": "Lorum ipsum",
+      "price": 599
+   },
+   {
+      "id": 2,
+      "name": "Bolivian 1",
+      "description": "Lorum ipsum",
+      "price": 649
+   }
+]
