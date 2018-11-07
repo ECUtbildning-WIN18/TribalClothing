@@ -10,7 +10,7 @@ namespace TribalClothing.ProductImporter.View
     {
         public void Display()
         {
-            var importFromJSON = new ImportFromJSON();
+            
 
             Console.WriteLine("1. List products");
             Console.WriteLine("2. Import from CSV");
@@ -40,7 +40,8 @@ namespace TribalClothing.ProductImporter.View
 
                     case ConsoleKey.D3:
                         Console.Clear();
-                        importFromJSON.ImportJSON();
+                        var importFromJSON = new ImportFromJSON();
+                        importFromJSON.Display();
                         menuInputLoop = false;
                         break;
 
