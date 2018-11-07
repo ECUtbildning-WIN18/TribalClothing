@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace TribalClothing.ProductImporter.Views
 {
@@ -21,6 +19,8 @@ namespace TribalClothing.ProductImporter.Views
                     Console.WriteLine($"{product.Name} {product.Description} {product.Price}\n");
                 }
             }
+
+            Console.ReadKey();
         }
     }
 }

@@ -1,20 +1,18 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.Views
-=======
-﻿namespace TribalClothing.ProductImporter.Views
->>>>>>> ca98bee53f681d4fe37554e07fa593d26dc5e2b6
-{
+{ 
      class ImportCsvView
     {
         public List<Product> productList = new List<Product>();
 
         public void Display()
         {
+            Console.Clear();
+
             var lines = File.ReadAllLines("TribalClothingCsv.csv");
 
             foreach (var product in lines)
@@ -23,20 +21,21 @@ namespace TribalClothing.ProductImporter.Views
 
 
                 Product newProduct = new Product();
-                newProduct.Name = values[0];
-                newProduct.Description = values[1];
-                newProduct.Price = decimal.Parse(values[2]);
+                newProduct.Name = values[1];
+                newProduct.Description = values[2];
+                newProduct.Price = decimal.Parse(values[3]);
                 productList.Add(newProduct);
 
-                //productList.Add(new Product()
-                //{
-                //    Name = values[0],
-                //    Description = values[2],
-                //    Price = decimal.Parse(values[3])
-                //});
+                Console.ReadKey();
+            }
 
-                Console.WriteLine(newProduct.Name, newProduct.Description, newProduct.Price);
-            } 
+            foreach (var element in productList)
+            {
+                Console.WriteLine($"{element.Name}, {element.Description}, {element.Price}");
+            }
+
+            var database = new Database();
+            database.AddData(productList);
         }
     }
 }
