@@ -7,6 +7,7 @@ namespace TribalClothing.ProductImporter.View
 {
     class MenuView
     {
+        // US01: As a user I want to see a menu when starting the application so I can choose what action to take
         public void Display()
         {
             Console.WriteLine("1. List products");
@@ -23,13 +24,15 @@ namespace TribalClothing.ProductImporter.View
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        //userSearchView.Display();
+                        //List Product
+                        var listProduct = new ListProduct();
+                        listProduct.Display();
                         menuInputLoop = false;
                         break;
 
                     case ConsoleKey.D2:
                         Console.Clear();
-                        //adminAddUserViewDB.Display();
+                        //Import from CSV
                         var importFromCsv = new ImportFromCsv();
                         importFromCsv.Display();
                         menuInputLoop = false;
@@ -37,13 +40,15 @@ namespace TribalClothing.ProductImporter.View
 
                     case ConsoleKey.D3:
                         Console.Clear();
-                        //adminDeleteUserViewDB.Display();
+                        //Import from JSON
                         menuInputLoop = false;
                         break;
 
                     case ConsoleKey.D4:
                         Console.Clear();
-                        //loginView.Display();
+                        //Clear Product Catalog
+                        var clearProductCatalog = new ClearProductCatalog();
+                        clearProductCatalog.Display();
                         menuInputLoop = false;
                         break;
 
