@@ -1,4 +1,6 @@
+
 ﻿using System.Runtime.Serialization;
+
 
 namespace TribalClothing.ProductImporter.Domain
 {
