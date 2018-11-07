@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CsvHelper;
 using System.IO;
-using System.Text;
-using CsvHelper;
 
 namespace TribalClothing.ProductImporter.Domain.Services
 {
@@ -12,13 +9,20 @@ namespace TribalClothing.ProductImporter.Domain.Services
         {
             using (var context = new TribalClothingContext())
             {
+                using (StreamReader reader = new StreamReader(csv_filepath))
+                {
+                    var csvReader = new CsvReader(reader);
+                    csvReader.Configuration.RegisterClassMap<ProductMapper>();
+                    csvReader.Configuration.Delimiter = ";";
+                    
+                    var records = csvReader.GetRecords<Product>();
 
-                TextReader reader = new StreamReader(csv_filepath);
-                var csvReader = new CsvReader(reader);
-                var records = csvReader.GetRecords<Product>();
-
-                context.Products.Add(new Product());
-                context.SaveChanges();
+                    foreach (var record in records)
+                    {
+                        context.Products.Add(record);
+                    }
+                    context.SaveChanges();
+                }
             }
         }
     }

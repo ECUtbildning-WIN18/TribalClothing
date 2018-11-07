@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using TribalClothing.ProductImporter.Domain.Services;
 
@@ -15,11 +13,21 @@ namespace TribalClothing.ProductImporter.Views
             {
                 Console.Clear();
                 Console.WriteLine(" Please paste the filepath of your json-file");
-                Console.Write(" >");
+                Console.Write("\n >");
+
                 var jsonFilePath = Console.ReadLine();
                 var importJSON = new ImportJSON();
                 importJSON._ImportJSON(jsonFilePath);
-                Thread.Sleep(2000);
+
+                Console.Write("Importing.");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
+                Thread.Sleep(250); Console.Write(".");
                 done = true;
 
             } while (!done);
