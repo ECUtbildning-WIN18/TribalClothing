@@ -6,7 +6,7 @@ namespace TribalClothing.ProductImporter.Domain
     class Product
     {
         [IgnoreDataMember]
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
@@ -16,13 +16,6 @@ namespace TribalClothing.ProductImporter.Domain
 
         }
 
-        public Product(int id, string name, string description, decimal price)
-        {
-            Id = id;
-            Name = name;
-            Description = description;
-            Price = price;
-        }
         public Product(string name, string description, decimal price)
         {
             Name = name;
@@ -30,6 +23,4 @@ namespace TribalClothing.ProductImporter.Domain
             Price = price;
         }
     }
-
-
 }
