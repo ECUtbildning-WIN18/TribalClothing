@@ -12,6 +12,7 @@ namespace TribalClothing.ProductImporter.Domain
         {
 
         }
+
         public Product(string name, string description, decimal price)
         {
             Name = name;
