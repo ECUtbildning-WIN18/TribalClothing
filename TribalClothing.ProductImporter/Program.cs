@@ -6,6 +6,8 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
+            MainMenu mm = new MainMenu();
+            mm.Display();
             Console.WriteLine("Hello World!");
         }
     }
