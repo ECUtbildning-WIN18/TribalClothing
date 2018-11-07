@@ -1,4 +1,4 @@
-namespace TribalClothing.ProductImporter.Views
+namespace TribalClothing.ProductImporter.Views.Services
 {
     public struct PopulatorService
     {

@@ -28,9 +28,12 @@
         <e p="TribalClothing.ProductImporter.csproj" t="IncludeRecursive" />
         <e p="TribalClothingContext.cs" t="Include" />
         <e p="Views" t="Include">
-          <e p="BaseView.cs" t="Include" />
+          <e p="ListItemsView.cs" t="Include" />
           <e p="MainView.cs" t="Include" />
-          <e p="PopulatorService.cs" t="Include" />
+          <e p="Services" t="Include">
+            <e p="BaseView.cs" t="Include" />
+            <e p="PopulatorService.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="TribalClothing.sln" t="IncludeFlat" />

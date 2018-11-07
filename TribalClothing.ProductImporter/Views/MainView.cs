@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TribalClothing.ProductImporter.Views.Services;
 
 namespace TribalClothing.ProductImporter.Views
 {
@@ -20,6 +21,8 @@ namespace TribalClothing.ProductImporter.Views
                 switch (input)
                 {
                     case ConsoleKey.D1:
+                        var liv = new ListItemsView();
+                        liv.Run();
                         break;
                     case ConsoleKey.D2:
                         break;
