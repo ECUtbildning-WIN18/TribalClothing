@@ -9,13 +9,16 @@ namespace TribalClothing.ProductImporter.Views
     {
         public void Display()
         {
+            Console.Clear();
+            Console.WriteLine("Products: \n");
+
             using (var db = new TribalClothingContext())
             {
                 var productList = db.Products.ToList();
 
                 foreach(var product in productList)
                 {
-                    Console.WriteLine($"{product.Name} {product.Description} {product.Price}");
+                    Console.WriteLine($"{product.Name} {product.Description} {product.Price}\n");
                 }
             }
         }

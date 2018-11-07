@@ -35,6 +35,12 @@ namespace TribalClothing.ProductImporter.Views
                         csvImport.Display();
                         break;
                     }
+                case ConsoleKey.D3:
+                    {
+                        var jsonImport = new ImportJsonView();
+                        jsonImport.Display();
+                        break;
+                    }
                 case ConsoleKey.D4:
                     {
                         //insert view
