@@ -30,6 +30,7 @@
         <e p="Views" t="Include">
           <e p="ListItemsView.cs" t="Include" />
           <e p="MainView.cs" t="Include" />
+          <e p="ResetCatalogView.cs" t="Include" />
           <e p="Services" t="Include">
             <e p="BaseView.cs" t="Include" />
             <e p="PopulatorService.cs" t="Include" />

@@ -29,6 +29,8 @@ namespace TribalClothing.ProductImporter.Views
                     case ConsoleKey.D3:
                         break;
                     case ConsoleKey.D4:
+                        var rcv = new ResetCatalogView();
+                        rcv.Run();
                         break;
                     case ConsoleKey.Escape:
                         Console.WriteLine("Press return to exit application");
