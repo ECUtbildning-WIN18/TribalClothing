@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TribalClothing.ProductImporter.View;
 
 namespace TribalClothing.ProductImporter
 {
@@ -7,7 +8,7 @@ namespace TribalClothing.ProductImporter
     {
         static void Main(string[] args)
         {
-            Test();
+            MainView.Display();
         }
 
         static public void Test()
