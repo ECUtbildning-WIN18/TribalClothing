@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using TribalClothing.ProductImporter.Domain;
 
 namespace TribalClothing.ProductImporter.View
 {
@@ -10,6 +11,8 @@ namespace TribalClothing.ProductImporter.View
         // US01: As a user I want to see a menu when starting the application so I can choose what action to take
         public void Display()
         {
+            var importFromJSON = new ImportFromJSON();
+
             Console.WriteLine("1. List products");
             Console.WriteLine("2. Import from CSV");
             Console.WriteLine("3. Import from JSON");
@@ -40,7 +43,9 @@ namespace TribalClothing.ProductImporter.View
 
                     case ConsoleKey.D3:
                         Console.Clear();
-                        //Import from JSON
+
+                        importFromJSON.ImportJSON();
+
                         menuInputLoop = false;
                         break;
 
