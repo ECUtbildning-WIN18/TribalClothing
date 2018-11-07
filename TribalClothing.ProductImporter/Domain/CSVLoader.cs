@@ -19,7 +19,7 @@ namespace TribalClothing.ProductImporter.Domain
                     var line = reader.ReadLine();
                     var values = line.Split(';');
 
-                    Products.Add(new Product(Convert.ToInt32(values[0]), values[1], values[2], Convert.ToDecimal(values[3])));
+                    Products.Add(new Product( values[1], values[2], Convert.ToDecimal(values[3])));
                 }
                 foreach (var item in Products)
                 {

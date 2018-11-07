@@ -25,7 +25,8 @@ namespace TribalClothing.ProductImporter.Domain
                 switch (input.Key)
                 {
                     case ConsoleKey.D1: // list
-                    
+                    var productView = new ProductView();
+                    productView.Display();
                     break;
 
                     case ConsoleKey.D2: // Import CSV
@@ -34,9 +35,12 @@ namespace TribalClothing.ProductImporter.Domain
                     break;
 
                     case ConsoleKey.D3: // Import JSON
+                        var fromJsonFile = new FromJsonFile();
+                        fromJsonFile.LoadJson();
                     break;
                     case ConsoleKey.D4: // Clear Products
-                        LoopisFinished = true;
+                        var clearDatabase = new ClearDatabase();
+                        clearDatabase.DeleteItemsInDatabase();
                         break;
                     case ConsoleKey.D5: // Log Out
                         Environment.Exit(0);

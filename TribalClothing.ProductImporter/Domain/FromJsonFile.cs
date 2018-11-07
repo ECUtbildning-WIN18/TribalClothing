@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
 using Newtonsoft.Json;
@@ -27,6 +28,10 @@ namespace TribalClothing.ProductImporter.Domain
                     }
                 }
             }
+
+            Console.WriteLine("\nLoaded from json to database");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey(true);
         }
     }
 }
