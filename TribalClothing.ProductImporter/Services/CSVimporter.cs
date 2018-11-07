@@ -11,30 +11,32 @@ namespace TribalClothing.ProductImporter.Services
         {
             using (var reader = new StreamReader("Products.csv"))
             {
-                
-                    var context = new TribalClothingContext();
+                var context = new TribalClothingContext();
 
-                    while (!reader.EndOfStream)
-                    {
-                        var line = reader.ReadLine();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
 
-                        var values = line.Split(';');
+                    var values = line.Split(';');
 
-                        //var id = Convert.ToInt32(values[0]);
-                        var name = values[1];
-                        var description = values[2];
-                        var price = Convert.ToDecimal(values[3]);
+                    var name = values[1];
 
-                        var product = new Product(name, description, price);
-                        context.Products.Add(product);
-                    }
+                    var description = values[2];
 
-                    context.SaveChanges();
+                    var price = Convert.ToDecimal(values[3]);
+
+                    var product = new Product(name, description, price);
+
+                    context.Products.Add(product);
+                }
+
+                context.SaveChanges();
+
                 Console.Clear();
                 Console.WriteLine("Products added from CSV, press any key");
                 Console.ReadKey();
-                MainView.Display();
 
+                MainView.Display();
             }
         }
     }
