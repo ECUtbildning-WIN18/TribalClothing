@@ -9,7 +9,7 @@ namespace TribalClothing.ProductImporter.Services
     {
         public static void Import()
         {
-            using (var reader = new StreamReader("Products.csv"))
+            using (var reader = new StreamReader("..\\..\\..\\DataFiles\\Products.csv"))
             {
                 var context = new TribalClothingContext();
 

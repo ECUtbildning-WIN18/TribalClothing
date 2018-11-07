@@ -10,7 +10,8 @@ namespace TribalClothing.ProductImporter.Domain
     {
         public static void ReadJson()
         {
-            using (StreamReader reader = new StreamReader("Products.json"))
+            //using (StreamReader reader = new StreamReader(Environment.CurrentDirectory, @"~\DataFiles\Products.json"))
+            using (StreamReader reader = new StreamReader($"..\\..\\..\\DataFiles\\Products.json"))
             {
                 var json = reader.ReadToEnd();
 
