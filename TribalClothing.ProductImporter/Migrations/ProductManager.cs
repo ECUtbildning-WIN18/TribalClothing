@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using CsvHelper;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using TribalClothing.ProductImporter.Domain;
@@ -12,7 +13,8 @@ namespace TribalClothing.ProductImporter.Migrations
     class ProductManager
     {
         TribalClothingContext db = new TribalClothingContext();
-        public void listProducts()
+        List<Product> products;             
+        public void ListProducts()
         {
             List<Product> pl = db.Products.ToList();
             foreach (var item in pl)
@@ -21,14 +23,13 @@ namespace TribalClothing.ProductImporter.Migrations
             }
         }
 
-        public void deleteProducts()
+        public void DeleteProducts()
         {
             db.Database.ExecuteSqlCommand("Truncate table products");
         }
 
-        public void importJson()
+        public void ImportJson()
         {
-            List<Product> products;
             using (StreamReader r = new StreamReader("products-json.json"))
             {
                 string json = r.ReadToEnd();
@@ -43,7 +44,7 @@ namespace TribalClothing.ProductImporter.Migrations
             //db.Dispose();
         }
 
-        public void importCsv()
+        public void ImportCsv()
         {
             List<string> lines = new List<string>();
             using (var reader = new StreamReader("products-csv.csv"))
@@ -53,13 +54,17 @@ namespace TribalClothing.ProductImporter.Migrations
                     var line = reader.ReadLine();
                     lines.Add(line);
                 }
+                //var csvReader = new CsvReader(reader);
+                //var records = csvReader.GetRecords<Product>();
+                for (int i = 1; i<lines.Count; i++)
+                {
+                    var values = lines[i].Split(";");
+                    db.Products.Add(new Product { Name = values[1], Description = values[2], Price = decimal.Parse(values[3]) });
+                }
             }
-            for (int i = 1; i < lines.Count; i++)
-            {
-                var values = lines[i].Split(';');
-                db.Products.Add(new Product { Name = values[1], Description = values[2], Price = decimal.Parse(values[3]) });
-            }
+            
             db.SaveChanges();
+            //db.Dispose();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace TribalClothing.ProductImporter
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=dator\\sqlexpress;Initial Catalog=TribalClothing; Integrated Security=true");
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=TribalClothing; Integrated Security=true");
             //optionsBuilder.UseSqlServer("Server=.;Database=TribalClothing;Integrated Security=True;");
         }
 

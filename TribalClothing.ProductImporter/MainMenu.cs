@@ -25,19 +25,19 @@ namespace TribalClothing.ProductImporter
                 {
                     case "1":
                         Console.WriteLine("List");
-                        pm.listProducts();
+                        pm.ListProducts();
                         break;
                     case "2":
                         Console.WriteLine("Import CSV");
-                        pm.importCsv();
+                        pm.ImportCsv();
                         break;
                     case "3":
                         Console.WriteLine("Import JSON");
-                        pm.importJson();
+                        pm.ImportJson();
                         break;
                     case "4":
                         Console.WriteLine("Clear catalog");
-                        pm.deleteProducts();
+                        pm.DeleteProducts();
                         break;
                     default:
                         Console.WriteLine("Chose between 1 and 4 please:");
