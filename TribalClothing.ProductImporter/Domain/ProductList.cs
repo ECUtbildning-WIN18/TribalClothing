@@ -10,25 +10,27 @@ namespace TribalClothing.ProductImporter.Domain
             Console.Clear();
 
             Console.WriteLine("# List products: ");
-            
+
             using (var context = new TribalClothingContext())
             {
-                
-                var products = context.Products.ToList();
+                int count = 0;
 
+                var products = context.Products.ToList();
+                
                 foreach (var product in products)
                 {
-
-                    Console.WriteLine($"Name: {product.Name} Id: {product.Id}  Price: {product.Price} Description: {product.Description}");
                     
+                    Console.WriteLine($"Name: {product.Name} Id: {product.Id}  Price: {product.Price} Description: {product.Description}");
+                    count++;
                 }
-            }
-            
-            Console.WriteLine("\nEnd of List, press any button to continue.");
-            Console.ReadKey();
 
-            var menu = new MenuView();
-            menu.Display();
+                Console.WriteLine($"\n Total products: {count}");
+                Console.WriteLine("\nEnd of List \r press any button to continue.");
+                Console.ReadKey();
+
+                var menu = new MenuView();
+                menu.Display();
+            }
         }
     }
 }
