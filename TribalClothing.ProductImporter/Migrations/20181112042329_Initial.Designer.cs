@@ -9,7 +9,7 @@ using TribalClothing.ProductImporter;
 namespace TribalClothing.ProductImporter.Migrations
 {
     [DbContext(typeof(TribalClothingContext))]
-    [Migration("20181107080527_Initial")]
+    [Migration("20181112042329_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
